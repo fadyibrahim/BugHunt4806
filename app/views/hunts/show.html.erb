@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @hunt.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @hunt.end %>
+</p>
+
+<p>
+  <strong>Percentage:</strong>
+  <%= @hunt.percentage %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hunt.description %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @hunt.url %>
+</p>
+
+<%= link_to 'Edit', edit_hunt_path(@hunt) %> |
+<%= link_to 'Back', hunts_path %>
