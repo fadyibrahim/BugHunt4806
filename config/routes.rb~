@@ -64,7 +64,7 @@ Rails.application.routes.draw do
   #   end
 
   get 'signup'  => 'users#new' 
-  #resources :users
+  resources :users
 
   get 'login'  => 'sessions#new' 
   resources :sessions
