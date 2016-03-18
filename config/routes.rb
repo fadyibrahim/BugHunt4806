@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get 'welcome/index'
-  root 'welcome#index'
-
+  get 'companies/index'
+  root 'companies#index'
+  
+  #oauth2 to access github api
+  get 'auth/github', :as => 'github_auth'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

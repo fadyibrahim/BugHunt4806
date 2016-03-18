@@ -22,5 +22,8 @@ module BugHunt4806
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.middleware.use OmniAuth::Builder do
+	provider :github, '5163772dbf2e4efa4103', '62e0594e6dda93b8527b1c62009ca2f5ea82d4f6'
+     end 
   end
 end
