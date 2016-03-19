@@ -4,12 +4,12 @@ one:
   name: MyString
   title: MyString
   score: 1
-  pwd: MyString
+  password_digest: MyString
   email: MyString
 
 two:
   name: MyString
   title: MyString
   score: 1
-  pwd: MyString
+  password_digest: MyString
   email: MyString
