@@ -49,10 +49,10 @@ ActiveRecord::Schema.define(version: 20160317170911) do
     t.string   "name"
     t.string   "title"
     t.integer  "score"
-    t.string   "pwd"
+    t.string   "password_digest"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
