@@ -1,9 +1,0 @@
-<h2>Hello World! What is up?</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
-<a href = "/users">Users</a>
-<a href = "/hunts">Hunts</a>
-<a href = "/companies">Companies</a>
-<a href = "/bugs">Bugs</a>
-
