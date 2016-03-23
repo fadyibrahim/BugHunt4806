@@ -3,12 +3,12 @@ require 'test_helper'
 class BugsControllerTest < ActionController::TestCase
   setup do
     @bug = bugs(:one)
+    @user = users(:one)
   end
 
   test "should get index" do
     get :index
-    assert_response :success
-    assert_not_nil assigns(:bugs)
+    assert_response :redirect
   end
 
   test "should get new" do
@@ -26,7 +26,7 @@ class BugsControllerTest < ActionController::TestCase
 
   test "should show bug" do
     get :show, id: @bug
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should get edit" do
