@@ -12,5 +12,6 @@
 !/log/.keep
 /tmp
 
-#ignore lock file
-Gemfile.lock
+#ignore temporary files
+*.rb~
+*.erb~
