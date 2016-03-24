@@ -1,5 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/assets/application.css">
+
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/users">Users</a></li>
+  <li><a href="/hunts">Bug Hunts</a></li>
+  <li><a href="/companies">Companies</a></li>
+  <li><a href = "/bugs">Bugs</a> </li>
+  <li><a href = "/signup">Sign Up</a></li>
+  <li><a href = "/login">Login</a></li>
+</ul>
+<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
 <h1>New Bug</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', bugs_path %>
+</div>

@@ -1,5 +1,6 @@
 class BugsController < ApplicationController
   before_action :set_bug, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:index, :show]
 
   # GET /bugs
   # GET /bugs.json
