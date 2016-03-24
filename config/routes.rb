@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   
   #oauth2 to access github api
   get 'auth/github', :as => 'github_auth'
-
+  get "/auth/github/callback" => "hunts#index"
+ # get '/auth/companies/:provider/callback', :
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
