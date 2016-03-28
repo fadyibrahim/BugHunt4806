@@ -1,0 +1,21 @@
+<%= form_for(@bug_creation) do |f| %>
+  <% if @bug_creation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bug_creation.errors.count, "error") %> prohibited this bug_creation from being saved:</h2>
+
+      <ul>
+      <% @bug_creation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :timestamp %><br>
+    <%= f.datetime_select :timestamp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

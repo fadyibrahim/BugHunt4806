@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bug Creations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bug_creations.each do |bug_creation| %>
+      <tr>
+        <td><%= bug_creation.timestamp %></td>
+        <td><%= link_to 'Show', bug_creation %></td>
+        <td><%= link_to 'Edit', edit_bug_creation_path(bug_creation) %></td>
+        <td><%= link_to 'Destroy', bug_creation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bug creation', new_bug_creation_path %>

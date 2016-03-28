@@ -1,5 +1,6 @@
 class Bug < ActiveRecord::Base
-	belongs_to :company
-	has_one :hunt, through: :company
-	has_many :users, through: :company
+	belongs_to :hunt
+	has_one :bug_creation
+	has_many :bug_assignment
+	has_one :bug_resolution
 end
