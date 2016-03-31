@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  title: MyString
+  name: John Doe
+  title: Mr.
   score: 1
-  password_digest: MyString
-  email: MyString
+  password_digest: password1
+  email: john@doe.com
 
 two:
-  name: MyString
-  title: MyString
+  name: Jane Doe
+  title: Ms.
   score: 1
-  password_digest: MyString
-  email: MyString
+  password_digest: password2
+  email: jane@doe.com

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/bugs'
     else
-      redirect_to 'login'
+      redirect_to '/login'
     end 
   end
   def destroy 

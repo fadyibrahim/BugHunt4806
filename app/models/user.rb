@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
 	has_many :assigned_bugs, :class_name => 'Bug', :foreign_key => 'bug_id', :through => bug_assignmentss
 	has_many :resolved_bugs, :class_name => 'Bug', :foreign_key => 'bug_id', :through => bug_resolutions
  	has_secure_password
+	validates :email, uniqueness: true
 end

@@ -17,6 +17,7 @@ class BugsControllerTest < ActionController::TestCase
   end
 
   test "should create bug" do
+    delete :destroy, id: @bug
     assert_difference('Bug.count') do
       post :create, bug: { completed: @bug.completed, created: @bug.created, name: @bug.name, points: @bug.points, url: @bug.url }
     end

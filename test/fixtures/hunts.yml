@@ -4,12 +4,12 @@ one:
   start: 2016-03-17 17:05:34
   end: 2016-03-17 17:05:34
   percentage: 1.5
-  description: MyString
-  url: MyString
+  description: example bug number 1
+  url: bug1.com
 
 two:
   start: 2016-03-17 17:05:34
   end: 2016-03-17 17:05:34
-  percentage: 1.5
-  description: MyString
-  url: MyString
+  percentage: 1.9
+  description: example bug the second
+  url: bug2.com

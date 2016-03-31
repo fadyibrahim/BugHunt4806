@@ -17,6 +17,7 @@ class CompaniesControllerTest < ActionController::TestCase
   end
 
   test "should create company" do
+    delete :destroy, id: @company
     assert_difference('Company.count') do
       post :create, company: { description: @company.description, name: @company.name, url: @company.url, website: @company.website }
     end
