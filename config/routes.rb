@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :bug_resolutions
+  resources :bug_assignments
+  resources :bug_creations
   resources :bugs
   resources :users
   resources :hunts

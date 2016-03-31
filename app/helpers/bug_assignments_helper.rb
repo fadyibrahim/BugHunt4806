@@ -1,0 +1,2 @@
+module BugAssignmentsHelper
+end

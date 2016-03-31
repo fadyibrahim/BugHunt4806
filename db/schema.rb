@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317170911) do
+ActiveRecord::Schema.define(version: 20160328162208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bug_assignments", force: :cascade do |t|
+    t.datetime "timestamp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bug_creations", force: :cascade do |t|
+    t.datetime "timestamp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bug_resolutions", force: :cascade do |t|
+    t.datetime "timestamp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bugs", force: :cascade do |t|
     t.string   "name"
@@ -49,10 +67,10 @@ ActiveRecord::Schema.define(version: 20160317170911) do
     t.string   "name"
     t.string   "title"
     t.integer  "score"
-    t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
