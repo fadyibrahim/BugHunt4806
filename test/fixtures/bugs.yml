@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: FirstBug
   points: 1
   completed: false
-  url: MyString
+  url: fisrtbug.com
   created: 2016-03-17 17:09:11
 
 two:
-  name: MyString
+  name: SecondBug
   points: 1
   completed: false
-  url: MyString
+  url: SecondBug.com
   created: 2016-03-17 17:09:11
+
+

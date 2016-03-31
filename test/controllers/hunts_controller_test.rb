@@ -17,6 +17,7 @@ class HuntsControllerTest < ActionController::TestCase
   end
 
   test "should create hunt" do
+    delete :destroy, id: @hunt
     assert_difference('Hunt.count') do
       post :create, hunt: { description: @hunt.description, end: @hunt.end, percentage: @hunt.percentage, start: @hunt.start, url: @hunt.url }
     end

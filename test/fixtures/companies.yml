@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  website: MyString
-  url: MyString
-  description: MyString
+  name: Company1
+  website: company1website.com
+  url: company1website.com
+  description: This is an example company.
 
 two:
-  name: MyString
-  website: MyString
-  url: MyString
-  description: MyString
+  name: Company2
+  website: company2website.com
+  url: company2website.com
+  description: This is a second example company.
