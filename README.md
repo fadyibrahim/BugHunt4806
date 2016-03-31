@@ -1,21 +1,15 @@
 # BugHunt4806
 
-March 17th - Backlog
-Due to how far behind schedule this project is, it is necessary to reprioritise our focus to more readily attainable goals.
-Features to Add:
--Create Bug Hunts with a start and end time
+March 31st - Backlog:
 
--View existing, current Bug Hunts
+-Bug page - link to hunt, creator, assignees. allow users to assign themselves
 
--Create Bugs and associate them with Bug Hunts
+-Company page - list users, current hunts. allow users to join company
 
--View bugs linked to a hunt
+-Hunt page - list bugs, link to company. interface for adding bugs or pulling from github
 
--Create an account
+-User page - list company, created bugs, assigned bugs, completed bugs
 
--Log in/log out
+-Github integration
 
--Allow users to close bugs, associate them with a user, and award points to that user
-
-
--GitHub integration
+-Tidy up
