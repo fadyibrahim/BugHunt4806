@@ -13,9 +13,11 @@ class BugsController < ApplicationController
   def show
   end
 
-  # GET /bugs/new
-  def new
+  # GET /bugs/new(:id)
+  def new(id)
     @bug = Bug.new
+    @hunt = Hunt.find(id)
+    @bug.hunt = @hunt
   end
 
   # GET /bugs/1/edit
@@ -28,7 +30,6 @@ class BugsController < ApplicationController
     @bug = Bug.new(bug_params)
     @bug.completed = false
     @bug.created = Time.new.inspect
-    @bug.hunt = 
 
     #@bug_creation = BugCreation.new()
     #set the creation time to the current time
