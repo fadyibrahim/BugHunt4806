@@ -26,7 +26,7 @@ class BugsController < ApplicationController
   # POST /bugs.json
   def create
     @bug = Bug.new(bug_params)
-    @bug.completed = false
+    @bug.completed = true
     #@bug_creation = BugCreation.new()
     #set the creation time to the current time
     #also create a bug_creation object with those parameters
