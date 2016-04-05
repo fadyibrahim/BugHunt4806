@@ -15,6 +15,8 @@ class HuntsController < ApplicationController
   # GET /hunts/new
   def new
     @hunt = Hunt.new
+    @hunt.company_id = params[:company_id]
+    @hunt.save
   end
 
   # GET /hunts/1/edit

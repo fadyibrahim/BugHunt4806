@@ -19,6 +19,8 @@ class BugsController < ApplicationController
   def new()
     @bug = Bug.new()
     @bug.hunt_id = params[:hunt_id]
+    @bug.completed = false
+    @bug.created = Time.new.inspect
     @bug.save
   end
 
