@@ -6,6 +6,8 @@ class BugsController < ApplicationController
   # GET /bugs.json
   def index
     @bugs = Bug.all
+    #@hunt = Hunt.find(params[:hunt_id])
+    #@bug = @hunt.bug.all
   end
 
   # GET /bugs/1
@@ -14,10 +16,10 @@ class BugsController < ApplicationController
   end
 
   # GET /bugs/new(:id)
-  def new
-    @bug = Bug.new
-    @hunt = Hunt.find(params[:id])
-    @bug.hunt = @hunt
+  def new()
+    @bug = Bug.new()
+    @bug.hunt_id = params[:hunt_id]
+    @bug.save
   end
 
   # GET /bugs/1/edit
@@ -28,8 +30,9 @@ class BugsController < ApplicationController
   # POST /bugs.json
   def create
     @bug = Bug.new(bug_params)
-    @bug.completed = false
-    @bug.created = Time.new.inspect
+    #@bug.hunt_id = params[:hunt_id]
+    #@bug.completed = false
+    #@bug.created = Time.new.inspect
 
     #@bug_creation = BugCreation.new()
     #set the creation time to the current time

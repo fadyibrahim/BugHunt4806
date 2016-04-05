@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328162208) do
+ActiveRecord::Schema.define(version: 20160405205407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,7 +42,10 @@ ActiveRecord::Schema.define(version: 20160328162208) do
     t.datetime "created"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "hunt_id"
   end
+
+  add_index "bugs", ["hunt_id"], name: "index_bugs_on_hunt_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -61,7 +64,10 @@ ActiveRecord::Schema.define(version: 20160328162208) do
     t.string   "url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "bug_id"
   end
+
+  add_index "hunts", ["bug_id"], name: "index_hunts_on_bug_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -73,4 +79,6 @@ ActiveRecord::Schema.define(version: 20160328162208) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "bugs", "hunts"
+  add_foreign_key "hunts", "bugs"
 end
