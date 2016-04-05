@@ -14,7 +14,7 @@ class BugsController < ApplicationController
   end
 
   # GET /bugs/new(:id)
-  def new(id)
+  def new
     @bug = Bug.new
     @hunt = Hunt.find(params[:id])
     @bug.hunt = @hunt
