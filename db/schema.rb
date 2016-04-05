@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405205407) do
+ActiveRecord::Schema.define(version: 20160405222437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,12 @@ ActiveRecord::Schema.define(version: 20160405205407) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "hunt_id"
+    t.integer  "user_id"
   end
+
+  add_index "companies", ["hunt_id"], name: "index_companies_on_hunt_id", using: :btree
+  add_index "companies", ["user_id"], name: "index_companies_on_user_id", using: :btree
 
   create_table "hunts", force: :cascade do |t|
     t.datetime "start"
@@ -65,9 +70,11 @@ ActiveRecord::Schema.define(version: 20160405205407) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "bug_id"
+    t.integer  "company_id"
   end
 
   add_index "hunts", ["bug_id"], name: "index_hunts_on_bug_id", using: :btree
+  add_index "hunts", ["company_id"], name: "index_hunts_on_company_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -77,8 +84,15 @@ ActiveRecord::Schema.define(version: 20160405205407) do
     t.string   "email"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "company_id"
   end
 
+  add_index "users", ["company_id"], name: "index_users_on_company_id", using: :btree
+
   add_foreign_key "bugs", "hunts"
+  add_foreign_key "companies", "hunts"
+  add_foreign_key "companies", "users"
   add_foreign_key "hunts", "bugs"
+  add_foreign_key "hunts", "companies"
+  add_foreign_key "users", "companies"
 end
