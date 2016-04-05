@@ -19,15 +19,15 @@
     <%= f.label :points %><br>
     <%= f.number_field :points %>
   </div>
-  <div class="field">
+  <!--<div class="field">			should default to false
     <%= f.label :completed %><br>
     <%= f.check_box :completed %>
-  </div>
+  </div>-->
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
   </div>
-  <div class="field">
+  <div class="field">			<!--should take the current date time-->
     <%= f.label :created %><br>
     <%= f.datetime_select :created %>
   </div>
