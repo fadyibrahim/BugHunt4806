@@ -28,6 +28,7 @@ class BugsController < ApplicationController
     @bug = Bug.new(bug_params)
     @bug.completed = false
     @bug.created = Time.new.inspect
+    @bug.hunt = 
 
     #@bug_creation = BugCreation.new()
     #set the creation time to the current time
