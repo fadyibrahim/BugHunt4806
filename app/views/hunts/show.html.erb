@@ -38,7 +38,7 @@
   <%= @hunt.url %>
 </p>
 
-<%= link_to 'New Bug', new_bug_path(@hunt.id) %>
+<%= link_to 'New Bug', {:controller => "bug", :action => "new", :id => hunt.id } %>
 
 <!--<%= link_to 'Edit', edit_hunt_path(@hunt) %> |-->
 <%= link_to 'Back', hunts_path %>
