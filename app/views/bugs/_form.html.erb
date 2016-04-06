@@ -1,4 +1,4 @@
-<%= form_for(@bug) do |f| %>
+<%= form_for([@hunt, @bug]) do |f| %>
   <% if @bug.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bug.errors.count, "error") %> prohibited this bug from being saved:</h2>
@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+  
 
   <div class="field">
     <%= f.label :name %><br>
@@ -19,18 +20,18 @@
     <%= f.label :points %><br>
     <%= f.number_field :points %>
   </div>
-  <div class="field">
+  <!--<div class="field">			should default to false
     <%= f.label :completed %><br>
     <%= f.check_box :completed %>
-  </div>
+  </div>-->
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
   </div>
-  <div class="field">
+  <!--<div class="field">			should take the current date time
     <%= f.label :created %><br>
     <%= f.datetime_select :created %>
-  </div>
+  </div>-->
   <div class="actions">
     <%= f.submit %>
   </div>

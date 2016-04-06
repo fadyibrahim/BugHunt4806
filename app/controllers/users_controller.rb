@@ -61,6 +61,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def join
+    @user = User.find(current_user.id)
+    @user.company_id = params[:company_id]
+    @user.save
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
